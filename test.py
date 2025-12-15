@@ -1,0 +1,4 @@
+test="""""Here are the results for **expected revenue** and **leads count** by salesperson:\n\n| **Salesperson**   | **Leads Count** | **Expected Revenue**  |\n|-------------------|-----------------|-----------------------|\n| Steven 
+Stanley    | 6               | 240,000,000.00        |\n| Gabriel Buck      | 4               | 235,000,000.00        
+|\n| Administrator     | 23              | 129,303,372.00        |\n| Andy Vo           | 2               | 123,124,142.00        |\n| Benjamin Jones    | 3               | 90,000,000.00         |\n\n---\n**SQLQuery:**\n```sql\nSELECT\n    rp.name AS salesperson,\n    COUNT(cl.id) AS leads_count,\n    COALESCE(SUM(cl.expected_revenue), 0) AS expected_revenue\nFROM\n    res_users ru\nLEFT JOIN\n    crm_lead cl ON ru.id = cl.user_id\nJOIN\n    res_partner rp ON ru.partner_id = rp.id\nWHERE\n    ru.active = true\nGROUP BY\n    rp.name\nORDER BY\n    expected_revenue DESC\nLIMIT 5;\n"""
+print(test.replace('\n','<br>'))

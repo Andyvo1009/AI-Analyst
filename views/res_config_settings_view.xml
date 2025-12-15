@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_ai_analyst_bot" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ai.analyst.bot</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form" position="inside">
+                <app name="ai_analyst_bot" string="AI Analyst Bot">
+                    <block title="Discuss Analyst Bot">
+                        <setting string="Analyst Bot User"
+                                 help="Select the user that will answer in Discuss as the analyst chatbot.">
+                            <field name="ai_analyst_bot_user_id" options="{'no_create': True}"/>
+                        </setting>
+
+                        <setting string="Analyst Service Endpoint"
+                                 help="Endpoint that receives the question and returns an answer.">
+                            <field name="ai_analyst_bot_endpoint"/>
+                        </setting>
+
+                        <setting string="HTTP Timeout (seconds)">
+                            <field name="ai_analyst_bot_timeout"/>
+                        </setting>
+
+                        <setting string="Trigger Prefix (optional)"
+                                 help="If set, the bot responds only when the message starts with this prefix.">
+                            <field name="ai_analyst_bot_prefix"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
