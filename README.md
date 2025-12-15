@@ -1,4 +1,4 @@
-<img width="697" height="540" alt="image" src="https://github.com/user-attachments/assets/4b5c8774-8034-46bc-956f-e4d840b62e90" /># SQL AI Agent for Analytics in Odoo
+# SQL AI Agent for Analytics in Odoo
 ## Config cho Chatbot   
 Ta thêm dữ liệu vào bảng *res.config.settings* trong file ```res_config_settings.py```
 
@@ -35,5 +35,6 @@ Viết endpoint cho Agent để Odoo gọi tới.
 <img width="1113" height="419" alt="image" src="https://github.com/user-attachments/assets/7186aa2d-1873-47ad-99ec-89e3c8de2988" />
 
 <img width="665" height="706" alt="image" src="https://github.com/user-attachments/assets/b753967b-44fe-4562-8049-2b610b9f8c24" />
+
 
 
